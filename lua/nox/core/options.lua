@@ -1,5 +1,5 @@
 -- Tree stype explorer
-vim.cmd("let g:netrw_liststyle = 3")
+vim.cmd('let g:netrw_liststyle = 3')
 
 -- Shorter for convenience
 local opt = vim.opt
@@ -16,5 +16,24 @@ opt.autoindent	= true	-- copy indent from current line when starting new one
 
 opt.wrap = false
 
+-- Case-sensitive search
 opt.ignorecase  = true
 opt.smartcase   = true
+
+-- Cursor line hightlighting
+opt.cursorline  = true
+
+-- Colors
+opt.termguicolors = true
+opt.background    = 'dark'
+opt.signcolumn    = 'yes'
+
+-- Normal backspace
+opt.backspace = 'indent,eol,start'
+
+-- System clipboard
+opt.clipboard:append('unnamedplus')
+
+-- Split windows
+opt.splitright = true
+opt.splitbelow = true
