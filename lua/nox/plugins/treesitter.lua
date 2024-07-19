@@ -1,0 +1,88 @@
+return {
+  'nvim-treesitter/nvim-treesitter',
+  event = { 'BufReadPre', 'BufNewFile' },
+  build = ':TSUpdate',
+  dependencies = {
+    'windwp/nvim-ts-autotag',
+  },
+  config = function()
+    local treesitter = require('nvim-treesitter.configs')
+
+    treesitter.setup({
+      highlight = {
+        enable = true,
+      },
+      indent = {
+        enable = true,
+      },
+      autotag = {
+        enable = true,
+      },
+      ensure_installed = {
+        'angular',
+        'asm',
+        'bash',
+        'bibtex',
+        'c',
+        'c_sharp',
+        'cmake',
+        'cpp',
+        'css',
+        'csv',
+        'diff',
+        'disassembly',
+        -- 'dockerfile',
+        'dot',
+        'editorconfig',
+        'git_config',
+        'git_rebase',
+        'gitattributes',
+        'gitcommit',
+        'gitignore',
+        'haskell',
+        'haskell_persistent',
+        'html',
+        'http',
+        'java',
+        'javascript',
+        'json',
+        'kotlin',
+        'latex',
+        'lua',
+        'luadoc',
+        'make',
+        'markdown',
+        'markdown_inline',
+        'nasm',
+        'nginx',
+        'objc',
+        'objdump',
+        'passwd',
+        'php',
+        'printf',
+        'python',
+        'regex',
+        'rust',
+        'scss',
+        'sql',
+        'ssh_config',
+        'todotxt',
+        'typescript',
+        'udev',
+        'vim',
+        'vimdoc',
+        'xml',
+        'yaml',
+      },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = '<leader>nn',
+          node_incremental = '<leader>nn',
+          scope_incremental = false,
+          node_decremental = '<bs>',
+        }
+      }
+    })
+  end,
+}
