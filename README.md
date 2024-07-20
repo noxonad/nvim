@@ -17,5 +17,5 @@ For debian-based it's:
 You have to have install LazyGit on your machine.
 
 ```bash
-# pacman -Syu lazygit
+# pacman -Syu lazygit luarocks
 ```

@@ -22,7 +22,7 @@ return {
     mason_lspconfig.setup({
       ensure_installed = {
         'snyk_ls',
-        'typos_ls',
+        'typos_lsp',
         'ast_grep',
         'autotools_ls',
         'awk_ls',

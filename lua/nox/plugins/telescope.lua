@@ -7,7 +7,7 @@ return {
     'nvim-tree/nvim-web-devicons',
     'folke/todo-comments.nvim',
   },
-  config = function ()
+  config = function()
     local telescope = require('telescope')
     local actions = require('telescope.actions')
 
@@ -32,7 +32,7 @@ return {
     k.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = 'Fuzzy find files in cwd' })
     k.set('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = 'Fuzzy find recent files' })
     k.set('n', '<leader>fs', '<cmd>Telescope live_grep<CR>', { desc = 'Find string in cwd' })
-    k.set('n', '<leader>fc', '<cmd>Telescope grep_string<CR>', { desc = 'Fuzy find files in cwd' })
+    k.set('n', '<leader>fc', '<cmd>Telescope grep_string<CR>', { desc = 'Find string under the cursor in cwd' })
     k.set('n', '<leader>ft', '<cmd>TodoTelescope<CR>', { desc = 'Find todos' })
   end,
 }
